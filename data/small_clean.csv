@@ -1,0 +1,603 @@
+zipcode,city_name,average_monthly_household_income
+98039,Bellevue; Hunts Point; Kirkland; Medina,26932.5
+98040,Mercer Island,18718.25
+98074,Sammamish,18487.83
+98077,Cottage Lake; Maltby; Union Hill-Novelty Hill,18485.25
+98164,Seattle,18302.25
+98075,Issaquah; Sammamish,17905.08
+98050,,17677.67
+98112,Seattle,17291.33
+98004,Beaux Arts Village; Bellevue; Clyde Hill; Hunts Point; Yarrow Point,16482.17
+98053,Ames Lake; Redmond; Union Hill-Novelty Hill,16183.83
+98006,Bellevue; Issaquah; Newcastle,15545.67
+98033,Bellevue; Kirkland; Redmond; Yarrow Point,15267.75
+99023,,14207.75
+98065,Snoqualmie,13923.5
+98199,Seattle,13732.75
+98052,Bellevue; Cottage Lake; Kirkland; Redmond; Sammamish; Union Hill-Novelty Hill; Woodinville,13447.42
+98019,Cottage Lake; Duvall; Union Hill-Novelty Hill,13375.58
+98177,Seattle; Shoreline,13345.17
+98008,Bellevue; Issaquah; Sammamish,13115.0
+98005,Bellevue,13114.75
+98029,Issaquah; Sammamish,12994.5
+98072,Bothell; Clearview; Cottage Lake; Kirkland; Maltby; Woodinville,12988.83
+98024,Fall City; Sammamish; Snoqualmie,12896.58
+98117,Seattle,12795.33
+98286,,12772.58
+98296,Cathcart; Clearview; Eastmont; High Bridge; Maltby; Mill Creek East; Silver Firs,12367.83
+98115,Kirkland; Seattle,12285.83
+98116,Seattle,12229.08
+98014,Ames Lake; Carnation; Lake Marcel-Stillwater,12118.67
+98110,Bainbridge Island,12072.33
+98021,Bothell; Bothell East; Bothell West; Brier; Kenmore; Maltby,11981.67
+98119,Seattle,11932.5
+98136,Seattle,11929.67
+98045,North Bend; Riverbend; Snoqualmie; Snoqualmie Pass; Tanner; Wilderness Rim,11808.5
+98222,,11798.25
+98027,Bellevue; East Renton Highlands; Hobart; Issaquah; Mirrormont; Sammamish,11789.0
+98121,Seattle,11707.58
+98332,Canterwood; Gig Harbor; Maplewood; Purdy; Rosedale,11699.58
+98333,Fox Island,11618.75
+98109,Seattle,11493.83
+98059,Bellevue; East Renton Highlands; Newcastle; Renton,11452.17
+99338,Kennewick; Richland,11395.75
+98010,Black Diamond; Lake Morton-Berrydale; Maple Valley,11330.33
+98275,Everett; Mukilteo; Picnic Point,11326.67
+98028,Bothell; Bothell West; Kenmore,11258.75
+98607,Camas; Fern Prairie; Vancouver; Washougal,11154.83
+98103,Seattle,11083.42
+98107,Seattle,11038.67
+98020,Edmonds; Esperance; Woodway,10788.58
+98038,Covington; East Renton Highlands; Hobart; Kent; Lake Morton-Berrydale; Maple Valley; Mirrormont; Ravensdale; Shadow Lake,10749.42
+99036,,10729.92
+98034,Bothell; Kenmore; Kirkland; Redmond,10671.92
+98042,Auburn; Covington; Kent; Lake Morton-Berrydale; Maple Valley; Shadow Lake,10635.08
+98606,Battle Ground; Brush Prairie; Hockinson; Venersborg,10633.33
+98012,Bothell; Bothell East; Bothell West; Clearview; Martha Lake; Mill Creek; Mill Creek East; Silver Firs,10583.58
+98335,Artondale; Gig Harbor; Raft Island; Rosedale; Wollochet,10537.25
+98102,Seattle,10528.75
+98391,Alderton; Auburn; Bonney Lake; Lake Tapps; Orting; Prairie Heights; Prairie Ridge; Sumner,10411.75
+98642,Dollars Corner; Duluth; La Center; Mount Vista; Ridgefield,10200.83
+98026,Edmonds; Esperance; Lynnwood; Meadowdale; Mukilteo; North Lynnwood; Picnic Point,10193.75
+98685,Felida; Lake Shore; Salmon Creek,10152.83
+98394,Key Center; Vaughn,10145.33
+98144,Seattle,10068.42
+98007,Bellevue; Redmond,10024.5
+98105,Seattle,9913.92
+98290,Bunk Foss; Chain Lake; Everett; Fobes Hill; Lake Bosworth; Lake Roesiger; Machias; Monroe; Monroe North; Snohomish; Three Lakes; Woods Creek,9870.67
+98122,Seattle,9854.33
+98056,Newcastle; Renton,9830.17
+99360,Touchet,9826.17
+98940,Ronald,9745.92
+98422,Browns Point; Dash Point; Fife Heights; Milton; Tacoma,9734.92
+98101,Seattle,9689.75
+98011,Bothell; Kenmore; Kirkland; Woodinville,9671.58
+98070,Vashon,9639.83
+99019,Liberty Lake,9627.25
+98314,Bremerton; Navy Yard City; Port Orchard,9555.25
+98155,Kenmore; Lake Forest Park; Shoreline,9541.42
+99179,Uniontown,9514.92
+98629,La Center,9496.33
+98671,Camas; Fern Prairie; Washougal,9429.42
+98166,Burien; Normandy Park,9293.08
+98092,Auburn; Black Diamond; Kent; Lake Holm; Lake Morton-Berrydale; Lake Tapps,9283.0
+99353,Richland; West Richland,9279.33
+98126,Seattle; White Center,9277.75
+98272,Chain Lake; Everett; High Bridge; Monroe; Monroe North; Sultan; Woods Creek,9153.83
+98407,Ruston; Tacoma,9151.08
+99203,Spokane,9150.0
+98443,Waller,9068.75
+99005,Green Bluff,9044.33
+98258,Cavalero; Lake Cassidy; Lake Stevens; Lochsloy; Machias; Sisco Heights,9039.17
+98280,,9006.92
+98058,East Renton Highlands; Fairwood; Kent; Maple Heights-Lake Desire; Renton; Shadow Lake,8949.58
+98118,Seattle,8872.92
+99322,Bickleton,8853.42
+98282,Camano,8810.08
+98134,Seattle,8802.67
+99352,Kennewick; Richland; West Richland,8795.58
+98205,Bunk Foss; Cavalero; Everett; Lake Stevens; Machias; Marysville,8787.5
+98321,Bonney Lake; Buckley; Enumclaw; Prairie Heights; Prairie Ridge; South Prairie; Wilkeson,8776.67
+98068,Roslyn; Snoqualmie Pass; Tanner,8728.42
+99131,,8715.83
+98675,Amboy; Yacolt,8702.0
+98036,Alderwood Manor; Bothell West; Brier; Lynnwood; Martha Lake; Mountlake Terrace; North Lynnwood,8702.0
+98208,Eastmont; Everett; Martha Lake; Mill Creek; Silver Firs,8691.17
+98370,Indianola; Keyport; Lofall; Poulsbo; Silverdale; Suquamish,8624.83
+98388,Ketron Island; Lakewood; Steilacoom; University Place,8583.83
+98292,Kayak Point; Lake Goodwin; Lake Ketchum; Marysville; Northwest Stanwood; Silvana; Stanwood; Sunday Lake; Warm Beach,8577.08
+98250,Friday Harbor,8556.75
+98329,Burley; Key Center; Stansberry Lake; Vaughn; Wauna,8522.83
+98327,DuPont; North Fort Lewis,8517.75
+98001,Algona; Auburn; Federal Way; Lakeland North; Lakeland South; Milton; Pacific,8504.58
+98383,Chico; Silverdale,8488.83
+98051,Hobart; Kent; Ravensdale,8481.42
+98374,Alderton; Graham; McMillin; Puyallup; South Hill,8438.67
+98249,Freeland,8434.92
+98346,Hansville; Indianola; Kingston; Port Gamble Tribal Community,8424.75
+98223,Arlington; Arlington Heights; Bryant; Canyon Creek; Lake Cassidy; Lake Goodwin; Marysville; North Marysville; Oso; Sisco Heights; Swede Heaven,8414.83
+98146,Burien; Seattle; White Center,8410.25
+98604,Battle Ground; Cherry Grove; Dollars Corner; Lewisville; Meadow Glade; Venersborg,8401.25
+98406,Tacoma,8400.0
+98686,Barberton; Mount Vista; Salmon Creek,8370.75
+98232,Alger; Edison,8365.67
+98516,Lacey; Olympia; Tanglewilde,8355.08
+98560,,8301.42
+98221,Anacortes,8259.5
+98328,Alder; Clear Lake; Eatonville; La Grande,8219.5
+98022,Black Diamond; Buckley; Enumclaw; Greenwater,8187.75
+98178,Bryn Mawr-Skyway; Renton; Seattle; Tukwila,8180.92
+99223,Spokane,8160.0
+98031,Kent,8122.08
+98946,Thorp,8108.5
+98367,Bethel; Bremerton; Burley; Gorst; Port Orchard; Southworth,8102.92
+98621,Grays River; Rosburg,8095.33
+98303,Anderson Island,8078.08
+98236,Clinton,8056.08
+98625,Kalama,8048.25
+98380,Seabeck,8029.25
+98360,Clear Lake; Crocker; Graham; Kapowsin; McMillin; Orting; Prairie Ridge; South Hill,8002.83
+98563,Aberdeen; Brady; Cosmopolis; Montesano,7988.83
+98338,Clear Lake; Elk Plain; Graham; Kapowsin; South Creek; South Hill,7985.75
+98274,Big Lake; Lake Cavanaugh; Lake McMurray; Mount Vernon,7978.5
+98821,,7975.67
+98125,Seattle,7963.0
+98932,Granger,7901.17
+98396,Carbonado; Wilkeson,7892.58
+98372,Alderton; Edgewood; North Puyallup; Puyallup; Sumner,7846.83
+98023,Des Moines; Federal Way,7844.17
+98371,Edgewood; Milton; Puyallup; Summit; Waller,7827.75
+98651,Hood River,7815.58
+99016,Liberty Lake; Spokane Valley,7805.33
+98342,Indianola,7795.42
+98229,Alger; Bellingham; Geneva; Sudden Valley,7789.75
+98271,Lake Goodwin; Marysville; North Marysville; Sisco Heights,7773.0
+99154,,7767.42
+98925,Easton; Roslyn,7739.42
+98375,Frederickson; South Hill; Summit View,7737.33
+98055,Kent; Renton,7733.42
+97031,Hood River; Odell,7717.67
+98502,Olympia; Tumwater,7713.75
+99224,Airway Heights; Spokane,7700.33
+98467,Fircrest; Steilacoom; Tacoma; University Place,7689.25
+98512,Olympia; Tumwater,7681.58
+98087,Lake Stickney; Larch Way; Lynnwood; Martha Lake; North Lynnwood; Picnic Point,7657.58
+98501,Lacey; Olympia; Tumwater,7650.42
+98270,Lake Cassidy; Marysville,7650.08
+98373,Clover Creek; Puyallup; South Hill; Summit; Summit View,7643.83
+99021,Green Bluff; Mead,7628.08
+98252,Canyon Creek; Granite Falls; Lake Bosworth; Lochsloy; Snohomish; Verlot,7616.67
+98513,Lacey; Nisqually Indian Community,7611.83
+98260,Langley,7595.5
+98220,Acme,7587.67
+99345,,7578.25
+98203,Eastmont; Everett,7574.33
+98262,,7567.08
+98683,Vancouver,7564.75
+98198,Des Moines; Federal Way; Kent; Normandy Park; SeaTac,7556.42
+98359,Burley,7528.0
+98108,Boulevard Park; Seattle; Tukwila; White Center,7525.33
+98524,Allyn; Grapeview; Vaughn,7516.75
+99354,Richland,7507.42
+98446,Clover Creek; Frederickson; Summit,7490.17
+98664,Vancouver,7473.17
+98104,Seattle,7466.5
+98802,East Wenatchee; Rock Island,7462.17
+98133,Seattle; Shoreline,7448.25
+98188,Kent; Renton; SeaTac; Tukwila,7435.25
+98240,Custer,7426.5
+98682,Brush Prairie; Camas; Hockinson; Orchards; Vancouver,7408.5
+99026,Spokane,7391.33
+99027,Otis Orchards-East Farms; Spokane Valley,7389.17
+98037,Larch Way; Lynnwood; Martha Lake; Meadowdale; North Lynnwood,7378.42
+98546,Grapeview,7357.92
+98230,Birch Bay; Blaine,7351.83
+98466,Fircrest; Tacoma; University Place,7333.58
+99103,Almira,7329.42
+98506,Olympia,7320.75
+98043,Edmonds; Lynnwood; Mountlake Terrace; Shoreline,7314.08
+99031,Spangle,7310.92
+98811,,7307.42
+98294,Everett; Gold Bar; North Sultan; Startup; Sultan,7275.92
+98106,Seattle; White Center,7275.08
+98263,Lyman,7242.42
+98834,Methow,7237.83
+98908,Ahtanum; Eschbach; Gleed; Summitview; Yakima,7235.25
+98672,Bingen; White Salmon,7218.0
+98245,,7197.75
+99025,Otis Orchards-East Farms,7179.67
+98354,Edgewood; Fife; Milton,7170.08
+98387,Elk Plain; Frederickson; Graham; Parkland; South Creek; Spanaway,7166.58
+98279,,7163.17
+98498,Lakewood; McChord AFB; Steilacoom,7157.33
+99323,Burbank,7135.92
+98257,La Conner,7133.0
+99401,,7115.5
+98365,Port Ludlow,7102.17
+98665,Five Corners; Hazel Dell; Lake Shore; Salmon Creek; Vancouver,7085.75
+98239,Coupeville,7084.58
+98424,Fife; Fife Heights; Milton; Tacoma,7080.17
+98248,Birch Bay; Custer; Ferndale; Marietta-Alderwood,7073.25
+98403,Tacoma,7057.58
+98264,Lynden,7043.83
+98311,Silverdale; Tracyton,7041.92
+98684,Vancouver,7041.33
+99337,Finley; Kennewick,7039.92
+98942,Selah; Yakima,7033.08
+98323,Carbonado; Wilkeson,7014.58
+99328,Dayton,7009.83
+98340,Hansville,7002.75
+98251,Gold Bar; May Creek; Startup,6993.5
+98226,Bellingham; Ferndale; Marietta-Alderwood,6985.0
+98390,Alderton; Auburn; North Puyallup; Pacific; Sumner,6959.75
+98674,Woodland,6958.08
+99152,Metaline,6957.42
+98638,Deep River; Grays River; Naselle; Rosburg,6953.33
+99012,Fairfield; Latah; Waverly,6946.58
+98148,Burien; Des Moines; Normandy Park; SeaTac,6936.83
+98596,Vader; Winlock,6925.42
+99003,,6924.08
+98826,Leavenworth,6920.67
+98650,Trout Lake,6918.83
+98261,,6913.17
+99037,Spokane Valley,6912.17
+99361,Dixie; Waitsburg,6904.17
+98588,,6898.58
+98846,Pateros,6879.17
+98601,Amboy,6869.83
+98580,Fort Lewis; McChord AFB; McKenna; Nisqually Indian Community; North Yelm; Roy; South Creek,6845.75
+98936,Moxee,6825.42
+98366,Bainbridge Island; Bremerton; East Port Orchard; Manchester; Parkwood; Port Orchard; Southworth,6813.83
+98032,Des Moines; Kent; Lakeland North; SeaTac; Tukwila,6808.83
+98244,Deming; Glacier; Kendall; Maple Falls; Peaceful Valley,6795.92
+98030,Auburn; Kent,6794.92
+98385,South Prairie,6792.75
+99148,Loon Lake; Springdale,6771.67
+99208,Country Homes; Fairwood; Mead; Spokane; Town and Country,6762.33
+99301,Pasco; West Pasco,6740.67
+98801,South Wenatchee; Sunnyslope; Wenatchee,6738.67
+98663,Hazel Dell; Vancouver,6707.75
+99161,Palouse,6707.17
+98288,Skykomish,6702.83
+98233,Alger; Burlington,6688.58
+98392,Suquamish,6680.17
+98445,Clover Creek; Frederickson; Midland; Parkland; Spanaway; Summit; Tacoma,6677.92
+98828,,6675.58
+98281,Point Roberts,6658.67
+98284,Alger; Clear Lake; Hamilton; Lyman; Sedro-Woolley,6649.42
+98589,Tenino,6636.67
+98579,Grand Mound; Rochester,6627.08
+98815,Cashmere,6621.92
+98823,Ephrata,6609.58
+98243,,6607.92
+98465,Tacoma,6593.67
+99022,Airway Heights; Fairchild AFB; Medical Lake,6576.92
+99128,Farmington,6567.25
+98381,Sekiu,6544.83
+98645,,6532.42
+98662,Barberton; Brush Prairie; Five Corners; Orchards; Vancouver,6525.75
+98253,,6493.33
+98661,Minnehaha; Vancouver,6487.25
+98312,Bremerton; Chico; Erlands Point-Kitsap Lake; Gorst; Navy Yard City; Port Orchard; Rocky Point; Silverdale,6473.75
+98937,Cliffdell; Eschbach; Gleed; Naches; Nile,6471.75
+98597,La Grande; McKenna; North Yelm; Yelm,6471.58
+98376,Quilcene,6463.83
+99402,Asotin,6458.33
+98922,Cle Elum; Easton; Roslyn; South Cle Elum,6440.83
+98862,Twisp; Winthrop,6422.33
+98848,George; Quincy,6418.0
+98345,Keyport,6417.25
+98528,Allyn; Belfair,6407.5
+99362,College Place; Garrett; Walla Walla; Walla Walla East,6398.0
+98057,Bryn Mawr-Skyway; Renton; Tukwila,6378.33
+98611,Castle Rock,6376.42
+98933,Harrah,6373.33
+98349,Herron Island; Home; Key Center; Longbranch,6366.92
+99158,Oakesdale,6362.58
+98532,Centralia; Chehalis; Napavine; Pe Ell,6339.92
+99217,Mead; Spokane,6338.58
+98503,Lacey; Olympia; Tanglewilde,6332.92
+98276,Nooksack,6329.83
+99343,Basin City; Mesa,6317.5
+99029,Reardan,6312.0
+98368,Port Hadlock-Irondale; Port Townsend,6311.08
+98003,Des Moines; Federal Way; Lakeland South; Milton,6276.75
+98168,Boulevard Park; Burien; SeaTac; Tukwila; White Center,6247.0
+98247,Deming; Everson; Lynden; Nooksack,6239.58
+98816,Chelan,6226.92
+99320,Benton City; Richland; West Richland,6225.83
+98351,Longbranch,6216.58
+98201,Everett; Hat Island,6214.0
+99176,,6212.75
+98277,Oak Harbor; Whidbey Island Station,6197.08
+99181,Valley,6175.92
+99006,Deer Park,6165.92
+98273,Bay View; Burlington; Clear Lake; Conway; Mount Vernon,6165.92
+99356,Roosevelt,6144.42
+99139,Ione,6140.92
+98843,,6137.33
+98570,Onalaska,6134.08
+98837,Cascade Valley; Moses Lake; Moses Lake North,6121.75
+98858,Waterville,6117.83
+99135,Hartline,6114.83
+98617,Dallesport,6114.0
+98576,Rainier; Yelm,6094.92
+99030,Rockford,6083.75
+98591,Toledo,6077.58
+98616,,6068.33
+99180,Cusick,6058.5
+98310,Bremerton; Enetai; Tracyton,6043.92
+98953,Buena; Zillah,6040.75
+99008,,6037.08
+98643,Altoona; Deep River; Grays River; Rosburg; Skamokawa Valley,6029.75
+98943,Cle Elum; South Cle Elum,6023.58
+98382,Bell Hill; Blyn; Carlsborg; Jamestown; River Road; Sequim,6011.25
+98847,,6004.42
+98903,Ahtanum; Tampico; Union Gap; Yakima,5991.5
+99212,Millwood; Spokane; Spokane Valley,5980.25
+98603,,5965.92
+98619,Glenwood,5957.92
+99206,Millwood; Spokane Valley,5945.17
+98408,Tacoma,5944.0
+98833,,5943.25
+99126,Marcus,5917.92
+98418,Tacoma,5912.33
+98648,Carson; North Bonneville; Stevenson,5912.17
+98856,Twisp,5899.25
+99119,Cusick,5898.5
+98047,Algona; Auburn; Pacific,5895.25
+99350,Prosser,5879.58
+99009,,5862.33
+98660,Vancouver,5854.08
+98358,Marrowstone,5848.58
+98612,Cathlamet; East Cathlamet; Lower Elochoman; Puget Island; Skamokawa Valley; Upper Elochoman,5830.92
+98584,Shelton; Skokomish,5824.25
+99111,Colfax; Steptoe,5824.17
+99403,Asotin; Clarkston; Clarkston Heights-Vineland; West Clarkston-Highland,5820.5
+98613,Centerville,5810.5
+99185,Wilbur,5805.58
+99141,Barney's Junction; Barstow; Boyds; Kettle Falls,5805.25
+99122,Davenport,5803.42
+98538,,5799.42
+98402,Tacoma,5784.75
+98831,Manson,5762.92
+98590,Tokeland,5760.17
+99004,Cheney; Four Lakes,5756.25
+98557,McCleary,5752.0
+98363,Port Angeles,5718.33
+98002,Auburn; Kent; Pacific,5706.17
+98926,Ellensburg; Kittitas,5705.92
+98938,Outlook; Sunnyside,5701.75
+99113,Colton,5697.67
+98362,Port Angeles; Port Angeles East,5695.5
+99102,Albion,5693.08
+98405,Tacoma,5690.58
+98626,Castle Rock; Kalama; Kelso; Longview; West Side Highway,5689.58
+98947,Cowiche; Tieton,5683.33
+99218,Country Homes; Fairwood; Spokane; Town and Country,5682.17
+98836,Cashmere,5675.42
+98605,Bingen; White Salmon,5674.08
+98832,Krupp (Marlin),5657.67
+98542,,5651.92
+98571,Moclips; Pacific Beach,5646.0
+98404,Midland; Tacoma; Waller,5633.92
+98632,Kelso; Longview; Longview Heights; West Side Highway,5626.17
+98225,Bellingham; Marietta-Alderwood,5623.83
+99116,Coulee Dam; Elmer City,5612.58
+98537,Aberdeen; Cosmopolis; Junction City,5610.0
+99357,Royal City,5603.75
+98951,Donald; Harrah; Parker; Wapato,5602.67
+98822,Entiat,5601.83
+99348,Prescott,5597.42
+99011,Fairchild AFB,5594.17
+99032,Sprague,5593.0
+99344,Hatton; Othello,5592.67
+98204,Everett; Lake Stickney; Mukilteo,5579.25
+98624,Chinook; Ilwaco,5575.83
+98639,North Bonneville,5568.08
+98930,Grandview,5549.33
+98409,Tacoma,5542.75
+98610,Carson,5523.58
+99123,Electric City; Grand Coulee,5508.08
+98541,Elma; Malone; Porter; Satsop,5503.92
+99324,College Place; Garrett; Walla Walla,5496.5
+99349,Desert Aire; Mattawa,5468.42
+98952,White Swan,5453.42
+98572,Pe Ell,5450.67
+98568,Oakville,5447.5
+98635,Dallesport; Klickitat; Lyle,5446.75
+98256,Index,5441.0
+98520,Aberdeen; Aberdeen Gardens; Central Park; Cosmopolis; Junction City; Markham; Westport,5414.67
+98649,,5409.58
+99147,,5391.25
+99170,Malden; Rosalia,5391.08
+98339,Port Hadlock-Irondale,5374.17
+98237,Concrete,5362.58
+98565,Napavine,5362.17
+99159,Odessa,5354.5
+98595,Cohassett Beach; Grayland; Westport,5348.33
+99205,Spokane; Town and Country,5346.58
+99114,Colville,5340.42
+98577,Lebam; Raymond; South Bend; Willapa,5328.75
+98552,Humptulips; Neilton,5325.92
+98592,Union,5310.5
+99033,Tekoa,5288.58
+99117,Creston,5251.25
+98531,Centralia; Fords Prairie; Grand Mound,5226.83
+98620,Goldendale; Maryhill,5223.25
+99166,Curlew Lake; Pine Grove; Republic; Torboy,5222.17
+99171,St. John,5219.92
+98585,,5215.25
+98320,Brinnon,5209.08
+99156,Newport,5205.58
+98337,Bremerton; Port Orchard,5198.58
+98860,Wilson Creek,5197.17
+99101,Addy,5193.08
+99018,Latah,5156.0
+99336,Kennewick; Richland,5153.92
+98550,Aberdeen; Hogans Corner; Hoquiam; Humptulips; Oyehut,5144.5
+98841,Disautel; North Omak; Okanogan; Omak; Riverside,5134.67
+98533,,5107.67
+99150,Malo,5098.5
+99124,Elmer City,5092.25
+99130,Colfax; Garfield,5085.0
+98564,Mossyrock,5080.67
+98295,Peaceful Valley; Sumas,5076.92
+99133,Electric City; Grand Coulee,5073.17
+99341,Lind,5067.58
+98840,Malott; Okanogan; Omak,5044.92
+99216,Spokane Valley,5031.67
+99125,Endicott,5026.75
+98944,Sunnyside,5010.83
+99371,Washtucna,4998.67
+98315,Bangor Base,4997.92
+99143,LaCrosse,4986.08
+99333,,4977.92
+98499,Lakewood; McChord AFB; Parkland; Tacoma; University Place,4977.17
+98283,Marblemount; Rockport,4968.83
+99347,Pomeroy,4959.33
+99153,Metaline Falls,4912.75
+98857,Warden,4910.92
+98830,Mansfield,4905.5
+98935,Grandview; Mabton,4896.42
+99109,Chewelah,4894.5
+99169,Ritzville,4888.67
+99174,Steptoe,4883.0
+99326,Connell; Mesa,4883.0
+98851,Lakeview; Soap Lake,4882.42
+98817,Chelan Falls,4865.25
+98859,,4860.5
+99167,,4858.83
+98350,,4856.67
+98901,Moxee; Terrace Heights; Union Gap; Yakima,4852.83
+99329,Dixie,4837.0
+99001,Airway Heights; Spokane,4824.5
+98845,,4821.58
+98331,Forks; Queets,4819.08
+98902,Yakima,4775.17
+98444,Lakewood; Midland; Parkland; Spanaway; Tacoma,4773.92
+99110,Clayton,4752.33
+99118,Curlew,4751.75
+98640,Ocean Park,4749.33
+98526,Amanda Park,4739.58
+99115,Banks Lake South; Coulee City,4732.33
+98241,Darrington; Swede Heaven,4731.0
+99163,Albion; Pullman,4717.58
+98814,,4717.25
+98357,Neah Bay,4707.0
+99346,,4670.0
+99105,,4669.33
+98575,Neilton,4639.75
+98948,Toppenish,4631.5
+99155,Nespelem; Nespelem Community,4630.75
+98547,Grayland,4628.92
+98569,Ocean City; Ocean Shores,4616.25
+98824,George,4605.58
+98433,DuPont; Fort Lewis; Lakewood; North Fort Lewis,4583.92
+99134,Harrington,4582.08
+98305,,4569.5
+98586,South Bend,4548.5
+98812,Brewster; Pateros,4538.08
+99202,Spokane; Spokane Valley,4524.33
+99359,Starbuck,4521.08
+99335,Kahlotus,4495.0
+98361,Packwood,4484.83
+98336,,4478.33
+98647,Grays River; Skamokawa Valley,4467.33
+98530,Bucoda,4456.5
+98850,Rock Island,4444.83
+98325,Port Hadlock-Irondale,4403.67
+98304,Ashford,4387.33
+99121,Danville,4359.83
+98644,,4343.17
+99204,Spokane,4332.25
+98923,Cowiche,4307.92
+98548,Hoodsport,4305.0
+99138,Inchelium; Twin Lakes,4303.08
+83824,De Smet,4300.92
+99140,Keller,4284.17
+98813,Bridgeport,4281.5
+98326,Clallam Bay,4258.0
+83851,Plummer,4257.25
+98941,Cle Elum; Roslyn,4250.67
+98827,Loomis,4243.08
+98356,Morton,4240.5
+98583,Satsop,4230.5
+98377,,4228.58
+99137,,4222.33
+98631,Long Beach,4212.83
+98535,Copalis Beach; Ocean City,4207.08
+98855,Tonasket,4199.08
+99013,,4193.0
+99207,Spokane,4181.58
+98844,Oroville,4178.08
+98829,Malott,4161.17
+99201,Spokane,4118.67
+98439,Fort Lewis; Lakewood; McChord AFB,4116.33
+98849,Omak; Riverside,4079.08
+98224,Baring,4075.67
+98934,Kittitas,4017.25
+98673,Wishram,4010.42
+98593,Vader,3936.0
+83870,Tensed,3919.92
+99039,Waverly,3901.33
+99129,,3900.75
+98819,Conconully,3898.17
+99149,Malden,3875.08
+98582,,3839.5
+98587,Qui-nai-elt Village; Santiago; Taholah,3834.33
+98628,Klickitat,3829.0
+99330,,3828.33
+99017,Lamont,3794.75
+99173,Springdale,3716.08
+99136,,3679.58
+98266,Kendall; Maple Falls; Peaceful Valley,3601.75
+98235,Clear Lake,3537.08
+99157,Northport,3510.17
+98255,Hamilton,3490.42
+98555,,3462.83
+98527,Bay Center,3438.75
+98581,Ryderwood,3413.92
+99144,,3403.0
+98355,Mineral,3366.5
+99040,,3352.67
+98614,Chinook,3320.33
+98602,,3306.83
+98267,Marblemount,3298.0
+98670,,3231.08
+98852,,3161.92
+98297,,3157.0
+99151,Marcus,3083.5
+99363,Wallula,2860.17
+98536,Copalis Beach,2449.42
+99146,Laurier,2150.42
+99160,Orient,2138.08
+98939,Parker,1403.75
+98430,North Fort Lewis,-0.08
+98238,Conway,-0.08
+98421,Fife; Tacoma,-0.08
+98921,Buena,-0.08
+98195,Seattle,-0.08
+98207,Everett,-0.08
+98950,Vantage,-0.08
+98174,Seattle,-0.08
+98158,SeaTac,-0.08
+98447,Parkland,-0.08
+98154,Seattle,-0.08
+98416,Tacoma,-0.08
+98641,,-0.08
+99164,Pullman,-0.08
+98364,,-0.08
+98544,,-0.08
+98278,Whidbey Island Station,-0.08
+98353,,-0.08
+99034,,-0.08
+98853,,-0.08
+98438,McChord AFB,-0.08
+98558,McKenna,-0.08
+98330,Elbe,-0.08
+98559,Malone,-0.08
+98562,Moclips; Pacific Beach,-0.08
+99321,,-0.08
+99020,,-0.08
+98929,,-0.08
