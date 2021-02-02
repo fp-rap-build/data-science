@@ -5,8 +5,6 @@ import uvicorn
 from app import db, ml, viz
 
 description = """
-Edit your app's title and description. See [https://fastapi.tiangolo.com/tutorial/metadata/](https://fastapi.tiangolo.com/tutorial/metadata/)
-
 To use these interactive docs:
 - Click on an endpoint below
 - Click the **Try it out** button
@@ -16,8 +14,8 @@ To use these interactive docs:
 """
 
 app = FastAPI(
-    title='DS API',
-    description=description,
+    title='Data Science API',
+    description='Family Promise Rental Assistance Project',
     docs_url='/',
 )
 
