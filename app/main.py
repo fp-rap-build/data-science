@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
-from app import db, ml, viz
+from app import db, predict, viz
 
 description = """
 To use these interactive docs:
@@ -20,7 +20,7 @@ app = FastAPI(
 )
 
 app.include_router(db.router, tags=['Database'])
-app.include_router(ml.router, tags=['Machine Learning'])
+app.include_router(predict.router, tags=['Prediction Model'])
 app.include_router(viz.router, tags=['Visualization'])
 
 app.add_middleware(

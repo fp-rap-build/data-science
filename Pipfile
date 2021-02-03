@@ -17,6 +17,8 @@ pandas = "*"
 plotly = "*"
 sqlalchemy = "*"
 uvicorn = {extras = ["standard"], version = "*"}
+sklearn = "*"
+category-encoders = "*"
 
 [requires]
 python_version = "3"
