@@ -19,6 +19,7 @@ sqlalchemy = "*"
 uvicorn = {extras = ["standard"], version = "*"}
 sklearn = "*"
 category-encoders = "*"
+click = "*"
 
 [requires]
 python_version = "3"
