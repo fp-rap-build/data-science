@@ -1,0 +1,297 @@
+zipcode,city,county_name,family_members,annual_income
+99001,Airway Heights,Spokane,1,43350
+99001,Airway Heights,Spokane,2,49550
+99001,Airway Heights,Spokane,3,55750
+99001,Airway Heights,Spokane,4,61900
+99001,Airway Heights,Spokane,5,66900
+99001,Airway Heights,Spokane,6,71580
+99001,Airway Heights,Spokane,7,76800
+99001,Airway Heights,Spokane,8,81750
+99003,Chattaroy,Spokane,1,43350
+99003,Chattaroy,Spokane,2,49550
+99003,Chattaroy,Spokane,3,55750
+99003,Chattaroy,Spokane,4,61900
+99003,Chattaroy,Spokane,5,66900
+99003,Chattaroy,Spokane,6,71580
+99003,Chattaroy,Spokane,7,76800
+99003,Chattaroy,Spokane,8,81750
+99004,Cheney,Spokane,1,43350
+99004,Cheney,Spokane,2,49550
+99004,Cheney,Spokane,3,55750
+99004,Cheney,Spokane,4,61900
+99004,Cheney,Spokane,5,66900
+99004,Cheney,Spokane,6,71580
+99004,Cheney,Spokane,7,76800
+99004,Cheney,Spokane,8,81750
+99004,Cheney,Spokane,1,43350
+99004,Cheney,Spokane,2,49550
+99005,Colbert,Spokane,3,55750
+99005,Colbert,Spokane,4,61900
+99005,Colbert,Spokane,5,66900
+99005,Colbert,Spokane,6,71580
+99005,Colbert,Spokane,7,76800
+99005,Colbert,Spokane,8,81750
+99006,Deer Park,Spokane,1,43350
+99006,Deer Park,Spokane,2,49550
+99006,Deer Park,Spokane,3,55750
+99006,Deer Park,Spokane,4,61900
+99006,Deer Park,Spokane,5,66900
+99006,Deer Park,Spokane,6,71580
+99006,Deer Park,Spokane,7,76800
+99006,Deer Park,Spokane,8,81750
+99009,Elk,Spokane,1,43350
+99009,Elk,Spokane,2,49550
+99009,Elk,Spokane,3,55750
+99009,Elk,Spokane,4,61900
+99009,Elk,Spokane,5,66900
+99009,Elk,Spokane,6,71580
+99009,Elk,Spokane,7,76800
+99009,Elk,Spokane,8,81750
+99011,Fairchild Air Force Base,Spokane,1,43350
+99011,Fairchild Air Force Base,Spokane,2,49550
+99011,Fairchild Air Force Base,Spokane,3,55750
+99011,Fairchild Air Force Base,Spokane,4,61900
+99011,Fairchild Air Force Base,Spokane,5,66900
+99011,Fairchild Air Force Base,Spokane,6,71580
+99011,Fairchild Air Force Base,Spokane,7,76800
+99011,Fairchild Air Force Base,Spokane,8,81750
+99012,Fairfield,Spokane,1,43350
+99012,Fairfield,Spokane,2,49550
+99012,Fairfield,Spokane,3,55750
+99012,Fairfield,Spokane,4,61900
+99012,Fairfield,Spokane,5,66900
+99012,Fairfield,Spokane,6,71580
+99012,Fairfield,Spokane,7,76800
+99012,Fairfield,Spokane,8,81750
+99016,Greenacres,Spokane,1,43350
+99016,Greenacres,Spokane,2,49550
+99016,Greenacres,Spokane,3,55750
+99016,Greenacres,Spokane,4,61900
+99016,Greenacres,Spokane,5,66900
+99016,Greenacres,Spokane,6,71580
+99016,Greenacres,Spokane,7,76800
+99016,Greenacres,Spokane,8,81750
+99018,Latah,Spokane,1,43350
+99018,Latah,Spokane,2,49550
+99018,Latah,Spokane,3,55750
+99018,Latah,Spokane,4,61900
+99018,Latah,Spokane,5,66900
+99018,Latah,Spokane,6,71580
+99018,Latah,Spokane,7,76800
+99018,Latah,Spokane,8,81750
+99019,Liberty Lake,Spokane,1,43350
+99019,Liberty Lake,Spokane,2,49550
+99019,Liberty Lake,Spokane,3,55750
+99019,Liberty Lake,Spokane,4,61900
+99019,Liberty Lake,Spokane,5,66900
+99019,Liberty Lake,Spokane,6,71580
+99019,Liberty Lake,Spokane,7,76800
+99019,Liberty Lake,Spokane,8,81750
+99020,Marshall,Spokane,1,43350
+99020,Marshall,Spokane,2,49550
+99020,Marshall,Spokane,3,55750
+99020,Marshall,Spokane,4,61900
+99020,Marshall,Spokane,5,66900
+99020,Marshall,Spokane,6,71580
+99020,Marshall,Spokane,7,76800
+99020,Marshall,Spokane,8,81750
+99021,Mead,Spokane,1,43350
+99021,Mead,Spokane,2,49550
+99021,Mead,Spokane,3,55750
+99021,Mead,Spokane,4,61900
+99021,Mead,Spokane,5,66900
+99021,Mead,Spokane,6,71580
+99021,Mead,Spokane,7,76800
+99021,Mead,Spokane,8,81750
+99022,Medical Lake,Spokane,1,43350
+99022,Medical Lake,Spokane,2,49550
+99022,Medical Lake,Spokane,3,55750
+99022,Medical Lake,Spokane,4,61900
+99022,Medical Lake,Spokane,5,66900
+99022,Medical Lake,Spokane,6,71580
+99022,Medical Lake,Spokane,7,76800
+99022,Medical Lake,Spokane,8,81750
+99023,Mica,Spokane,1,43350
+99023,Mica,Spokane,2,49550
+99023,Mica,Spokane,3,55750
+99023,Mica,Spokane,4,61900
+99023,Mica,Spokane,5,66900
+99023,Mica,Spokane,6,71580
+99023,Mica,Spokane,7,76800
+99023,Mica,Spokane,8,81750
+99025,Newman Lake,Spokane,1,43350
+99025,Newman Lake,Spokane,2,49550
+99025,Newman Lake,Spokane,3,55750
+99025,Newman Lake,Spokane,4,61900
+99025,Newman Lake,Spokane,5,66900
+99025,Newman Lake,Spokane,6,71580
+99025,Newman Lake,Spokane,7,76800
+99025,Newman Lake,Spokane,8,81750
+99027,Otis Orchards,Spokane,1,43350
+99027,Otis Orchards,Spokane,2,49550
+99027,Otis Orchards,Spokane,3,55750
+99027,Otis Orchards,Spokane,4,61900
+99027,Otis Orchards,Spokane,5,66900
+99027,Otis Orchards,Spokane,6,71580
+99027,Otis Orchards,Spokane,7,76800
+99027,Otis Orchards,Spokane,8,81750
+99030,Rockford,Spokane,1,43350
+99030,Rockford,Spokane,2,49550
+99030,Rockford,Spokane,3,55750
+99030,Rockford,Spokane,4,61900
+99030,Rockford,Spokane,5,66900
+99030,Rockford,Spokane,6,71580
+99030,Rockford,Spokane,7,76800
+99030,Rockford,Spokane,8,81750
+99031,Spangle,Spokane,1,43350
+99031,Spangle,Spokane,2,49550
+99031,Spangle,Spokane,3,55750
+99031,Spangle,Spokane,4,61900
+99031,Spangle,Spokane,5,66900
+99031,Spangle,Spokane,6,71580
+99031,Spangle,Spokane,7,76800
+99031,Spangle,Spokane,8,81750
+99036,Valleyford,Spokane,1,43350
+99036,Valleyford,Spokane,2,49550
+99036,Valleyford,Spokane,3,55750
+99036,Valleyford,Spokane,4,61900
+99036,Valleyford,Spokane,5,66900
+99036,Valleyford,Spokane,6,71580
+99036,Valleyford,Spokane,7,76800
+99036,Valleyford,Spokane,8,81750
+99037,Spokane Valley,Spokane,1,43350
+99037,Spokane Valley,Spokane,2,49550
+99037,Spokane Valley,Spokane,3,55750
+99037,Spokane Valley,Spokane,4,61900
+99037,Spokane Valley,Spokane,5,66900
+99037,Spokane Valley,Spokane,6,71580
+99037,Spokane Valley,Spokane,7,76800
+99037,Spokane Valley,Spokane,8,81750
+99039,Waverly,Spokane,1,43350
+99039,Waverly,Spokane,2,49550
+99039,Waverly,Spokane,3,55750
+99039,Waverly,Spokane,4,61900
+99039,Waverly,Spokane,5,66900
+99039,Waverly,Spokane,6,71580
+99039,Waverly,Spokane,7,76800
+99039,Waverly,Spokane,8,81750
+99201,Spokane,Spokane,1,43350
+99201,Spokane,Spokane,2,49550
+99201,Spokane,Spokane,3,55750
+99201,Spokane,Spokane,4,61900
+99201,Spokane,Spokane,5,66900
+99201,Spokane,Spokane,6,71580
+99201,Spokane,Spokane,7,76800
+99201,Spokane,Spokane,8,81750
+99202,Spokane,Spokane,1,43350
+99202,Spokane,Spokane,2,49550
+99202,Spokane,Spokane,3,55750
+99202,Spokane,Spokane,4,61900
+99202,Spokane,Spokane,5,66900
+99202,Spokane,Spokane,6,71580
+99202,Spokane,Spokane,7,76800
+99202,Spokane,Spokane,8,81750
+99203,Spokane,Spokane,1,43350
+99203,Spokane,Spokane,2,49550
+99203,Spokane,Spokane,3,55750
+99203,Spokane,Spokane,4,61900
+99203,Spokane,Spokane,5,66900
+99203,Spokane,Spokane,6,71580
+99203,Spokane,Spokane,7,76800
+99203,Spokane,Spokane,8,81750
+99204,Spokane,Spokane,1,43350
+99204,Spokane,Spokane,2,49550
+99204,Spokane,Spokane,3,55750
+99204,Spokane,Spokane,4,61900
+99204,Spokane,Spokane,5,66900
+99204,Spokane,Spokane,6,71580
+99204,Spokane,Spokane,7,76800
+99204,Spokane,Spokane,8,81750
+99205,Spokane,Spokane,1,43350
+99205,Spokane,Spokane,2,49550
+99205,Spokane,Spokane,3,55750
+99205,Spokane,Spokane,4,61900
+99205,Spokane,Spokane,5,66900
+99205,Spokane,Spokane,6,71580
+99205,Spokane,Spokane,7,76800
+99205,Spokane,Spokane,8,81750
+99206,Spokane,Spokane,1,43350
+99206,Spokane,Spokane,2,49550
+99206,Spokane,Spokane,3,55750
+99206,Spokane,Spokane,4,61900
+99206,Spokane,Spokane,5,66900
+99206,Spokane,Spokane,6,71580
+99206,Spokane,Spokane,7,76800
+99206,Spokane,Spokane,8,81750
+99207,Spokane,Spokane,1,43350
+99207,Spokane,Spokane,2,49550
+99207,Spokane,Spokane,3,55750
+99207,Spokane,Spokane,4,61900
+99207,Spokane,Spokane,5,66900
+99207,Spokane,Spokane,6,71580
+99207,Spokane,Spokane,7,76800
+99207,Spokane,Spokane,8,81750
+99208,Spokane,Spokane,1,43350
+99208,Spokane,Spokane,2,49550
+99208,Spokane,Spokane,3,55750
+99208,Spokane,Spokane,4,61900
+99208,Spokane,Spokane,5,66900
+99208,Spokane,Spokane,6,71580
+99208,Spokane,Spokane,7,76800
+99208,Spokane,Spokane,8,81750
+99212,Spokane Valley,Spokane,1,43350
+99212,Spokane Valley,Spokane,2,49550
+99212,Spokane Valley,Spokane,3,55750
+99212,Spokane Valley,Spokane,4,61900
+99212,Spokane Valley,Spokane,5,66900
+99212,Spokane Valley,Spokane,6,71580
+99212,Spokane Valley,Spokane,7,76800
+99212,Spokane Valley,Spokane,8,81750
+99216,Spokane Valley,Spokane,1,43350
+99216,Spokane Valley,Spokane,2,49550
+99216,Spokane Valley,Spokane,3,55750
+99216,Spokane Valley,Spokane,4,61900
+99216,Spokane Valley,Spokane,5,66900
+99216,Spokane Valley,Spokane,6,71580
+99216,Spokane Valley,Spokane,7,76800
+99216,Spokane Valley,Spokane,8,81750
+99217,Spokane,Spokane,1,43350
+99217,Spokane,Spokane,2,49550
+99217,Spokane,Spokane,3,55750
+99217,Spokane,Spokane,4,61900
+99217,Spokane,Spokane,5,66900
+99217,Spokane,Spokane,6,71580
+99217,Spokane,Spokane,7,76800
+99217,Spokane,Spokane,8,81750
+99218,Spokane,Spokane,1,43350
+99218,Spokane,Spokane,2,49550
+99218,Spokane,Spokane,3,55750
+99218,Spokane,Spokane,4,61900
+99218,Spokane,Spokane,5,66900
+99218,Spokane,Spokane,6,71580
+99218,Spokane,Spokane,7,76800
+99218,Spokane,Spokane,8,81750
+99223,Spokane,Spokane,1,43350
+99223,Spokane,Spokane,2,49550
+99223,Spokane,Spokane,3,55750
+99223,Spokane,Spokane,4,61900
+99223,Spokane,Spokane,5,66900
+99223,Spokane,Spokane,6,71580
+99223,Spokane,Spokane,7,76800
+99223,Spokane,Spokane,8,81750
+99224,Spokane,Spokane,1,43350
+99224,Spokane,Spokane,2,49550
+99224,Spokane,Spokane,3,55750
+99224,Spokane,Spokane,4,61900
+99224,Spokane,Spokane,5,66900
+99224,Spokane,Spokane,6,71580
+99224,Spokane,Spokane,7,76800
+99224,Spokane,Spokane,8,81750
+99016,Spokane Valley,Spokane,1,43350
+99016,Spokane Valley,Spokane,2,49550
+99016,Spokane Valley,Spokane,3,55750
+99016,Spokane Valley,Spokane,4,61900
+99016,Spokane Valley,Spokane,5,66900
+99016,Spokane Valley,Spokane,6,71580
+99016,Spokane Valley,Spokane,7,76800
+99016,Spokane Valley,Spokane,8,81750
