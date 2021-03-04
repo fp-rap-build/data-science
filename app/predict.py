@@ -38,6 +38,8 @@ import pandas as pd
 
 zips = pd.read_csv('data/spokane_zipcodes.csv')
 
+zip_set = set(zips['zipcode'])
+
 class DefaultParams(BaseModel):
   """Use this data model to parse the request body JSON."""
   
@@ -57,16 +59,18 @@ def predict(user_input: DefaultParams):
 
 @router.post('/check_eligibility')
 def determine_eligibility(zip, family_size, income):
-
-    user = zips[zips['zipcode'] == zip]
-    user = user[user['family_members'] == family_size]
-    user_income = (income * 12)
-    comp_income = user['annual_income'].values[0]
+    if zip in zip_set:
+        user = zips[zips['zipcode'] == zip]
+        user = user[user['family_members'] == family_size]
+        user_income = (income * 12)
+        comp_income = user['annual_income'].values[0]
     
-    if (user_income <= comp_income).all():
-        return 'You Qualify!'
+        if (user_income <= comp_income).all():
+            return 'You Qualify!'
+        else:
+            return 'Sorry, you make too much'
     else:
-        return 'Sorry, you make too much'
+      return f'Sorry, services not offered in {zip}'
 
 
 #def predict(user_input):
