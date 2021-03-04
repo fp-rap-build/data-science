@@ -64,13 +64,12 @@ def determine_eligibility(zip, family_size, income):
         user = user[user['family_members'] == family_size]
         user_income = (income * 12)
         comp_income = user['annual_income'].values[0]
-    
+        print('Determining Eligibility')
         if (user_income <= comp_income).all():
             return 'You Qualify!'
         else:
             return 'Sorry, you make too much'
-    else:
-      return f'Sorry, services not offered in {zip}'
+    
 
 
 #def predict(user_input):
