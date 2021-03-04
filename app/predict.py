@@ -32,7 +32,7 @@ ref = {
 log = logging.getLogger(__name__)
 router = APIRouter()
 
-df = pd.read_csv('data/hud_requirements - data.csv')
+#df = pd.read_csv('data/hud_requirements - data.csv')
 
 import pandas as pd
 
