@@ -18,10 +18,25 @@ from pydantic import BaseModel, Field, validator
 
 from .model import lrmodel
 
+ref = {
+    1: 3612, 
+    2: 4129, 
+    3: 4645, 
+    4: 5158, 
+    5: 5575,
+    6: 5965, 
+    7: 6400, 
+    8: 6812
+  }
+
 log = logging.getLogger(__name__)
 router = APIRouter()
 
 df = pd.read_csv('data/hud_requirements - data.csv')
+
+import pandas as pd
+
+zips = pd.read_csv('data/spokane_zipcodes.csv')
 
 class DefaultParams(BaseModel):
   """Use this data model to parse the request body JSON."""
@@ -39,6 +54,20 @@ def predict(user_input: DefaultParams):
   default_df = user_input.to_df()
   y_pred = lrmodel.predict(default_df)
   return {'qualifies': int(y_pred[0])}
+
+@router.post('/check_eligibility')
+def determine_eligibility(zip, family_size, income):
+
+    user = zips[zips['zipcode'] == zip]
+    user = user[user['family_members'] == family_size]
+    user_income = (income * 12)
+    comp_income = user['annual_income'].values[0]
+    
+    if (user_income <= comp_income).all():
+        return 'You Qualify!'
+    else:
+        return 'Sorry, you make too much'
+
 
 #def predict(user_input):
 
