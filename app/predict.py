@@ -14,25 +14,41 @@ class Item(BaseModel):
     """Use this data model to parse the request body JSON."""
 
     zipcode: int = Field(..., example=99205)
-    family_members: int = Field(..., example= 4)
+    family_size: int = Field(..., example= 4)
     income: int = Field(..., example= 4000)
 
 @router.post('/predict')
-async def determine_eligibility(item: Item):
+async def determine_eligibility(zipcode, family_size, income):
 
-    zips = pd.read_csv('data/spokane_zipcodes.csv')
+    user = pd.read_csv('data/spokane_zipcodes.csv')
 
-    user = zips[zips['zipcode'] == item.zipcode]
-    user = user[user['family_members'] == item.family_members]
-    user_income = item.income*12
-    comp_income = user['annual_income'].astype(np.int32)
+
+    print(user.head())
+    try:
         
-    if (user_income <= user['annual_income']).all():
-        results =  'You Qualify!'
-    else:
-        results = 'Application Pending - income exceeds limit'
-
-    return {
-        'eligibility': results
-    }
-
+        income_goal = user[(user['zipcode'] == zipcode) & (user['family_members'] == family_size)].iloc[0][2] 
+        
+        zipgoal = user[(user['zipcode'] == zipcode) & (user['family_members'] == family_size)].iloc[0][0] 
+        user_income = income * 12
+        
+        if zip == zipgoal:
+            if (user_income <= income_goal):
+                return {
+                    'SNAP': 0,
+                    'CC': 0,
+                    'FP': 1
+                }
+                    
+            else:
+                return  {
+                    'SNAP': 0,
+                    'CC': 0,
+                    'FP': 0
+                }
+                    
+    except:
+        return {
+                    'SNAP': 0,
+                    'CC': 0,
+                    'FP': 1
+                }
