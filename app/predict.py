@@ -16,9 +16,11 @@ class Item(BaseModel):
     zipcode: int = Field(..., example=99205)
     family_size: int = Field(..., example= 4)
     income: int = Field(..., example= 4000)
+    unEmp90: bool = Field(..., example=True)
+    foodWrkr: bool = Field(..., example=True)
 
 @router.post('/predict')
-async def determine_eligibility(zipcode, family_size, income):
+async def determine_eligibility(zipcode, family_size, income, unEmp90, foodWrkr):
 
     user = pd.read_csv('data/spokane_zipcodes.csv')
 
