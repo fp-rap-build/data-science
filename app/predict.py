@@ -20,7 +20,7 @@ class Item(BaseModel):
     foodWrkr: bool = Field(..., example=True)
 
 
-@router.get('/predict')
+@router.post('/predict')
 async def determine_eligibility(zipcode, family_size, income, unEmp90, foodWrkr):
 
     user = pd.read_csv('app/spokane_zipcodes.csv', header='infer')
@@ -47,6 +47,14 @@ async def determine_eligibility(zipcode, family_size, income, unEmp90, foodWrkr)
                         'CC': 0,
                         'FP': 0
                 }
+
+                else:
+                    return {
+                        'SNAP': 0,
+                        'CC': 0,
+                        'FP': 1
+
+                    }
 
             
             else:
