@@ -55,33 +55,32 @@ class Item(BaseModel):
     zipcode: int = Field(..., example=99205)
     family_size: int = Field(..., example= 4)
     income: int = Field(..., example= 4000)
-    unEmp90: bool = Field(..., example=True)
-    foodWrkr: bool = Field(..., example=True)
+    unEmp90: str = Field(..., example=True)
+    foodWrkr: str = Field(..., example=True)
 
 
 @router.post('/predict')
 async def determine_eligibility(zipcode, family_size, income, unEmp90, foodWrkr):
 
     
-    
+    income_goal = income_filter[int(family_size)]
+
     try:
-        print(income_filter[family_size])
-        user_income = int(income * 12)
-        print(f'user income : {user_income}')
-        for z in user['zipcode']:
-            if int(z) == zipcode:
+        
+        user_income = int(income) * 12
+
+        for z in zips_filter:
             
-            
-                if user_income <= income_filter[family_size]:
+            if int(z) == int(zipcode):
 
-                    print(f'userincome if{user_income}')
+                
+
+                if unEmp90 == 'True':
 
 
-            
 
-                    if unEmp90 == True:
-
-                        print('made it past unemp!')
+                    if int(user_income) <= income_goal:
+                        
                         return {
                             'SNAP': 1,
                             'CC': 0,
