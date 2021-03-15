@@ -73,11 +73,7 @@ async def determine_eligibility(zipcode, family_size, income, unEmp90, foodWrkr)
             
             if int(z) == int(zipcode):
 
-                
-
                 if unEmp90 == 'True':
-
-
 
                     if int(user_income) <= income_goal:
                         
@@ -101,5 +97,16 @@ async def determine_eligibility(zipcode, family_size, income, unEmp90, foodWrkr)
                         'CC': 0,
                         'FP': 1
                     }
+        return {
+            'SNAP':0,
+            'CC':0,
+            'FP':0
+            }
+                
     except:
-        return f"Sorry, we don't offer services in {zipcode} yet, please contact yo momma"
+
+        return {
+                    'SNAP':0,
+                    'CC':0,
+                    'FP':0
+                }
