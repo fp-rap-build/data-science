@@ -19,38 +19,41 @@ class Item(BaseModel):
     unEmp90: bool = Field(..., example=True)
     foodWrkr: bool = Field(..., example=True)
 
-@router.post('/predict')
+
+@router.get('/predict')
 async def determine_eligibility(zipcode, family_size, income, unEmp90, foodWrkr):
 
-    user = pd.read_csv('data/spokane_zipcodes.csv')
-
-
-    print(user.head())
+    user = pd.read_csv('app/spokane_zipcodes.csv', header='infer')
+    
     try:
-        
-        income_goal = user[(user['zipcode'] == zipcode) & (user['family_members'] == family_size)].iloc[0][2] 
-        
-        zipgoal = user[(user['zipcode'] == zipcode) & (user['family_members'] == family_size)].iloc[0][0] 
+        allowed_zips = set(user['zipcode'])
         user_income = income * 12
         
-        if zip == zipgoal:
-            if (user_income <= income_goal):
+        if zipcode in allowed_zips:
+
+            
+
+            income_goal = user[(user['zipcode'] == zipcode) & (user['family_members'] == family_size)]
+            print('Found it!')
+            print(f'user income: {user_income}')
+            income_goal = income_goal['annual_income']
+            print(income_goal)
+            if (int(user_income) <= int(income_goal)):
+                print('made it inside user income statement')
+
+                if unEmp90 == True:
+                    return {
+                        'SNAP': 1,
+                        'CC': 0,
+                        'FP': 0
+                }
+
+            
+            else:
                 return {
                     'SNAP': 0,
                     'CC': 0,
                     'FP': 1
                 }
-                    
-            else:
-                return  {
-                    'SNAP': 0,
-                    'CC': 0,
-                    'FP': 0
-                }
-                    
     except:
-        return {
-                    'SNAP': 0,
-                    'CC': 0,
-                    'FP': 1
-                }
+        return f"Sorry, we don't offer services in {zip} yet, please contact yo momma"
