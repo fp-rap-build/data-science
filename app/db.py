@@ -27,7 +27,7 @@ async def get_db() -> sqlalchemy.engine.base.Connection:
         connection.close()
 
 
-@router.get('/info')
+@router.put('/info')
 async def get_url(connection=Depends(get_db)):
     """Verify we can connect to the database, 
     and return the database URL in this format:
