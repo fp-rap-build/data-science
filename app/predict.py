@@ -55,8 +55,8 @@ class Item(BaseModel):
     zipcode: int = Field(..., example=99205)
     family_size: int = Field(..., example= 4)
     income: int = Field(..., example= 4000)
-    unEmp90: str = Field(..., example=True)
-    foodWrkr: str = Field(..., example=True)
+    unEmp90: bool = Field(..., example=True)
+    foodWrkr: bool = Field(..., example=True)
 
 
 @router.post('/predict')
