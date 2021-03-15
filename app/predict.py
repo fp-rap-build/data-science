@@ -60,7 +60,7 @@ class Item(BaseModel):
 
 
 @router.post('/predict')
-async def determine_eligibility(zipcode, family_size, income, unEmp90, foodWrkr):
+async def determine_eligibility(zipcode, family_size, income, unEmp90, foodWrkr, minorGuest):
 
     
     income_goal = income_filter[int(family_size)]
