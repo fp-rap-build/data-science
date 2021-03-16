@@ -55,8 +55,8 @@ class Item(BaseModel):
     zipcode: int = Field(..., example=99205)
     family_size: int = Field(..., example= 4)
     income: int = Field(..., example= 4000)
-    unEmp90: int = Field(..., example=1)
-    foodWrkr: int = Field(..., example=1)
+    unEmp90: int = Field(..., example='1')
+    foodWrkr: int = Field(..., example='1')
 
 
 @router.post('/predict')
@@ -90,7 +90,6 @@ async def determine_eligibility(zipcode, family_size, income, unEmp90, foodWrkr,
                             'FP' : 1
                         }
 
-            
                 else:
                     return {
                         'SNAP': 0,
