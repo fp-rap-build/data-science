@@ -103,7 +103,12 @@ async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foo
                                 'FP': 0
                                 }
                         else:
-                            pass
+                            return {
+                                'SNAP:ERAP':0,
+                                'SNAP:ERA': 0,
+                                'CC': 0, 
+                                'FP': 1
+                            }
 
                     else:
                         pass
@@ -114,27 +119,39 @@ async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foo
 
                         if (int(rent) / int(income) ) >= .50:
 
-                            return {
-                                'SNAP:ERAP': 1,
-                                'SNAP:ERA': 0,
-                                'CC': 0,
-                                'FP': 0
-                                }
-                        else:
-                            pass
+                            if covidFH == '1':
+                                return {
+                                    'SNAP:ERAP': 1,
+                                    'SNAP:ERA': 0,
+                                    'CC': 0,
+                                    'FP': 0
+                                    }
+                            else:
+                                pass
 
-        if minorGuest == '1':
+                    if minorGuest == '1':
 
+                        return {
+                            'SNAP:ERAP': 0,
+                            'SNAP:ERA': 0,
+                            'CC': 0,
+                            'FP': 1
+            }
+
+        else:
             return {
                 'SNAP:ERAP': 0,
                 'SNAP:ERA': 0,
                 'CC': 0,
-                'FP': 1
+                'FP': 0
             }
-
-        else:
-            pass
 
 
     except:
-        return 'oops'
+        return {
+
+            'SNAP:ERAP': 0,
+            'SNAP:ERA': 0,
+            'CC': 0,
+            'FP': 0
+        }
