@@ -69,12 +69,7 @@ async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foo
                                 'FP': 0
                                 }
                         else:
-                            return {
-                                'SNAP:ERAP': 0,
-                                'SNAP:ERA': 0,
-                                'CC': 0,
-                                'FP': 1
-                            }
+                            pass
 
                     else:
                         pass
@@ -95,23 +90,27 @@ async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foo
                             else:
                                 pass
 
-                    if minorGuest == '1':
-
-                        return {
-                            'SNAP:ERAP': 0,
-                            'SNAP:ERA': 0,
-                            'CC': 0,
-                            'FP': 1
-                            }
+                    else:
+                        pass
 
         else:
-            return {
-                'SNAP:ERAP': 0,
-                'SNAP:ERA': 0,
-                'CC': 0,
-                'FP': 0
-            }
+            if minorGuest == '1':
+                return {
+                    'SNAP:ERAP': 0,
+                    'SNAP:ERA': 0,
+                    'CC': 0,
+                    'FP': 1
+                    }
 
+            else:
+
+                return {
+                    'SNAP:ERAP': 0,
+                    'SNAP:ERA': 0,
+                    'CC': 0,
+                    'FP': 0
+                    }
+                    
     except:
         return {
 
