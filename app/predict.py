@@ -15,6 +15,8 @@ user = pd.read_csv('app/spokane_zipcodes.csv', header='infer')
 income_filter = {1:43350, 2:49550, 3:55750,
                   4:61900, 5:66900, 6:71580,
                   7:76800, 8:81750}
+
+
 zips_filter = [99001, 99001, 99001, 99001, 99001, 99001, 99001, 99001, 99003,
         99003, 99003, 99003, 99003, 99003, 99003, 99003, 99004, 99004,
         99004, 99004, 99004, 99004, 99004, 99004, 99004, 99004, 99005,
@@ -55,57 +57,84 @@ class Item(BaseModel):
     zipcode: int = Field(..., example=99205)
     family_size: int = Field(..., example= 4)
     income: int = Field(..., example= 4000)
-    unEmp90: int = Field(..., example='1')
-    foodWrkr: int = Field(..., example='1')
+    unEmp90: str = Field(..., example='1')
+    foodWrkr: str = Field(..., example='1')
+    rent: int = Field(..., example=800)
+    minorGuest: str = Field(..., example='1')
+    covidFH: str = Field(..., example='1')
 
 
 @router.post('/predict')
-async def determine_eligibility(zipcode, family_size, income, unEmp90, foodWrkr, minorGuest):
-
+async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foodWrkr, minorGuest, covidFH):
     
     income_goal = income_filter[int(family_size)]
 
     try:
-        
+        # calculate yearly income from user input of monthly income
         user_income = int(income) * 12
+        
+        # I know this seems like it can be done a better way
+        # we found multiple ways to accomplish this task with 
+        # more elegant code, but the code didn't translate from 
+        # a colab notebook to here very well.  Something about
+        # the bool values and the way pandas operates in colab
+        # versus how it compares in fastAPI.  Not sure exactly
+        # what the problem was, but for now this gets our DS API
+        # functioning, and thankfully the logic is not very hard to
+        # figure out
 
-        for z in zips_filter:
+        # iterate through every zip in Spokane County, on match 
+        # go to next step in eligibility check
+        for z in user['zipcode']:
+            
             
             if int(z) == int(zipcode):
-
+                
                 if unEmp90 == '1':
 
                     if int(user_income) <= income_goal:
-                        
-                        return {
-                            'SNAP': 1,
-                            'CC': 0,
-                            'FP': 0
-                            }
+
+                        if covidFH == '1':
+
+                            return {
+                                'SNAP:ERAP': 0,
+                                'SNAP:ERA': 1,
+                                'CC': 0,
+                                'FP': 0
+                                }
+                        else:
+                            pass
 
                     else:
-                        return {
-                            'SNAP' : 0,
-                            'CC' : 0,
-                            'FP' : 1
-                        }
+                        pass
 
                 else:
-                    return {
-                        'SNAP': 0,
-                        'CC': 0,
-                        'FP': 1
-                    }
-        return {
-            'SNAP':0,
-            'CC':0,
-            'FP':0
-            }
-                
-    except:
 
-        return {
-                    'SNAP':0,
-                    'CC':0,
-                    'FP':0
-                }
+                    if int(user_income) <= income_goal:
+
+                        if (int(rent) / int(income) ) >= .50:
+
+                            return {
+                                'SNAP:ERAP': 1,
+                                'SNAP:ERA': 0,
+                                'CC': 0,
+                                'FP': 0
+                                }
+                        else:
+                            pass
+
+        if minorGuest == '1':
+
+            return {
+                'SNAP:ERAP': 0,
+                'SNAP:ERA': 0,
+                'CC': 0,
+                'FP': 1
+            }
+
+        else:
+            pass
+
+
+    except:
+        return 'oops'
