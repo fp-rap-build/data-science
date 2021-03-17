@@ -30,8 +30,7 @@ class Item(BaseModel):
 async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foodWrkr, minorGuest, covidFH):
 
     def getIncomegoal(zipcode, family_size):
-        income_goal = user[(user['zipcode'] == int(zipcode)) & (user['family_members'] == int(family_size))].iloc[0][4]
-        income_goal = income_goal.astype(int)
+        income_goal = (user[(user['zipcode'] == int(zipcode)) & (user['family_members'] == int(family_size))].iloc[0][4]).astype(int)
         return income_goal
 
     income_goal = getIncomegoal(zipcode, family_size)
@@ -63,8 +62,8 @@ async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foo
                         if covidFH == '1':
 
                             return {
-                                'SNAP:ERAP': 0,
-                                'SNAP:ERA': 1,
+                                'SNAP_ERAP': 0,
+                                'SNAP_ERA': 1,
                                 'CC': 0,
                                 'FP': 0
                                 }
@@ -82,8 +81,8 @@ async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foo
 
                             if covidFH == '1':
                                 return {
-                                    'SNAP:ERAP': 1,
-                                    'SNAP:ERA': 0,
+                                    'SNAP_ERAP': 1,
+                                    'SNAP_ERA': 0,
                                     'CC': 0,
                                     'FP': 0
                                     }
@@ -96,8 +95,8 @@ async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foo
         else:
             if minorGuest == '1':
                 return {
-                    'SNAP:ERAP': 0,
-                    'SNAP:ERA': 0,
+                    'SNAP_ERAP': 0,
+                    'SNAP_ERA': 0,
                     'CC': 0,
                     'FP': 1
                     }
@@ -105,17 +104,17 @@ async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foo
             else:
 
                 return {
-                    'SNAP:ERAP': 0,
-                    'SNAP:ERA': 0,
+                    'SNAP_ERAP': 0,
+                    'SNAP_ERA': 0,
                     'CC': 0,
                     'FP': 0
                     }
-                    
+
     except:
         return {
 
-            'SNAP:ERAP': 0,
-            'SNAP:ERA': 0,
+            'SNAP_ERAP': 0,
+            'SNAP_ERA': 0,
             'CC': 0,
             'FP': 0
         }
