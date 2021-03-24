@@ -27,14 +27,14 @@ class Item(BaseModel):
 
 
 @router.post('/predict')
-async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foodWrkr, minorGuest, covidFH):
+async def determine_eligibility(zipcode, cityName, family_size, income, rent, unEmp90, foodWrkr, minorGuest, covidFH):
 
     def getIncomegoal(zipcode, family_size):
         income_goal = (user[(user['zipcode'] == int(zipcode)) & (user['family_members'] == int(family_size))].iloc[0][4]).astype(int)
         return income_goal
 
     income_goal = getIncomegoal(zipcode, family_size)
-
+    
     try:
         # calculate yearly income from user input of monthly income
         user_income = int(income) * 12
@@ -61,12 +61,24 @@ async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foo
 
                         if covidFH == '1':
 
-                            return {
-                                'SNAP_ERAP': 0,
-                                'SNAP_ERA': 1,
-                                'CC': 0,
-                                'FP': 0
-                                }
+                            cityName = cityName.lower()
+                            if cityName.startswith('spokane'):
+                                if cityName.endswith('valley'):
+                                    return {
+                                        'SNAP_ERA':1,
+                                        'SNAP_ERAP': 0,
+                                        'CC': 0,
+                                        'FP': 0
+                                        }
+                                else:
+                                    pass
+                            else:
+                                return {
+                                    'SNAP_ERA':1,
+                                    'SNAP_ERAP': 0,
+                                    'CC': 0,
+                                    'FP': 0
+                                    }
                         else:
                             pass
 
@@ -89,27 +101,20 @@ async def determine_eligibility(zipcode, family_size, income, rent, unEmp90, foo
                             else:
                                 pass
 
+                        else:
+                            pass
                     else:
+            
+            
                         pass
-
-        else:
-            if minorGuest == '1':
-                return {
-                    'SNAP_ERAP': 0,
-                    'SNAP_ERA': 0,
-                    'CC': 0,
-                    'FP': 1
-                    }
-
-            else:
-
-                return {
-                    'SNAP_ERAP': 0,
-                    'SNAP_ERA': 0,
-                    'CC': 0,
-                    'FP': 0
-                    }
-
+        
+                        
+        return{
+            'SNAP_ERA':0,
+            'SNAP_ERAP':0,
+            'CC':0,
+            'FP':0
+        }
     except:
         return {
 
