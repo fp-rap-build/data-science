@@ -32,9 +32,10 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
     def getIncomegoal(zipcode, family_size):
         income_goal = (user[(user['zipcode'] == int(zipcode)) & (user['family_members'] == int(family_size))].iloc[0][4]).astype(int)
         return income_goal
-
-    income_goal = getIncomegoal(zipcode, family_size)
-    
+    try:
+        income_goal = getIncomegoal(zipcode, family_size)
+    except:
+        return{'CC':0}
     try:
         # calculate yearly income from user input of monthly income
         user_income = int(income) * 12
