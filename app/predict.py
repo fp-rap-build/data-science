@@ -33,6 +33,17 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
         fpNum = 1
     else:
         fpNum = 0
+    
+    if minorGuest == 'false':
+        if unEmp90 == 'false':
+            if foodWrkr == 'false':
+                if covidFH == 'false':
+                    return {
+                        'SNAP_ERA': 0,
+                        'SNAP_ERAP': 0,
+                        'FP': fpNum
+                    }
+        
     def getIncomegoal(zipcode, family_size):
         income_goal = (user[(user['zipcode'] == int(zipcode)) & (user['family_members'] == int(family_size))].iloc[0][4]).astype(int)
         return income_goal
@@ -43,7 +54,7 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
             'SNAP_ERA': 0,
             'SNAP_ERAP': 0,
             'CC':0,
-            'FP':0}
+            'FP':fpNum}
     try:
         # calculate yearly income from user input of monthly income
         user_income = int(income) * 12
@@ -79,14 +90,14 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
                                             'SNAP_ERA':1,
                                             'SNAP_ERAP': 0,
                                             'CC': 0,
-                                            'FP':1
+                                            'FP':fpNum
                                             }
                                     else:
                                         return {
                                             'SNAP_ERA':1,
                                             'SNAP_ERAP':0,
                                             'CC':0,
-                                            'FP':0
+                                            'FP':fpNum
                                         }
                                 else:
                                     pass
@@ -97,14 +108,14 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
                                         'SNAP_ERA':1,
                                         'SNAP_ERAP': 0,
                                         'CC': 0,
-                                        'FP':1
+                                        'FP':fpNum
                                         }
                                 else:
                                     return {
                                         'SNAP_ERA':1,
                                         'SNAP_ERAP':0,
                                         'CC':0,
-                                        'FP':0
+                                        'FP':fpNum
                                     }
                         else:
                             pass
@@ -125,14 +136,14 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
                                         'SNAP_ERAP': 1,
                                         'SNAP_ERA': 0,
                                         'CC': 0,
-                                        'FP':1
+                                        'FP':fpNum
                                         }
                                 else:
                                     return {
                                         'SNAP_ERAP':1,
                                         'SNAP_ERA':0,
                                         'CC':0,
-                                        'FP':0
+                                        'FP':fpNum
                                     }
                             else:
                                 pass
@@ -143,7 +154,8 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
             
             
                         pass
-        
+            else:
+                pass
                         
         if minorGuest == 'true':
 
@@ -151,7 +163,7 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
                 'SNAP_ERA':0,
                 'SNAP_ERAP':0,
                 'CC':0,
-                'FP':1
+                'FP':fpNum
                 }
         else:
             pass
@@ -161,5 +173,5 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
             'SNAP_ERAP': 0,
             'SNAP_ERA': 0,
             'CC': 0,
-            'FP':0
+            'FP':fpNum
         }
