@@ -17,18 +17,18 @@ user = pd.read_csv('app/spokane_zipcodes.csv', header='infer')
 class Item(BaseModel):
     """Use this data model to parse the request body JSON."""
 
-    zipcode: int = Field(..., example = 99205)
-    family_size: int = Field(..., example = 4)
-    income: int = Field(..., example = 4000)
+    zipCode: int = Field(..., example = 99205)
+    familySize: int = Field(..., example = 4)
+    monthlyIncome: int = Field(..., example = 4000)
     unEmp90: int = Field(..., example = 1)
     foodWrkr: int = Field(..., example = 1)
-    rent: int = Field(..., example = 800)
+    monthlyRent: int = Field(..., example = 800)
     minorGuest: int = Field(..., example = 1)
     covidFH: int = Field(..., example = 1)
 
 
 @router.post('/predict')
-async def determine_eligibility(zipcode, cityName, family_size, income, rent, unEmp90, foodWrkr, minorGuest, covidFH):
+async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, monthlyRent, unEmp90, foodWrkr, minorGuest, covidFH):
     if minorGuest == 'true':
         fpNum = 1
     else:
@@ -50,11 +50,11 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
                         'FP': fpNum
                     }
         
-    def getIncomegoal(zipcode, family_size):
-        income_goal = (user[(user['zipcode'] == int(zipcode)) & (user['family_members'] == int(family_size))].iloc[0][4]).astype(int)
+    def getIncomegoal(zipCode, familySize):
+        income_goal = (user[(user['zipcode'] == int(zipCode)) & (user['family_members'] == int(familySize))].iloc[0][4]).astype(int)
         return income_goal
     try:
-        income_goal = getIncomegoal(zipcode, family_size)
+        income_goal = getIncomegoal(zipCode, familySize)
     except:
         return{
             'SNAP_ERA': 0,
@@ -62,8 +62,10 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
             'VLP_EDP': edpNum,
             'FP':fpNum}
     try:
+        
         # calculate yearly income from user input of monthly income
-        user_income = int(income) * 12
+        user_income = int(monthlyIncome) * 12
+        
 
         # I know this seems like it can be done a better way
         # we found multiple ways to accomplish this task with
@@ -78,106 +80,84 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
         # iterate through every zip in Spokane County, on match
         # go to next step in eligibility check
         for z in user['zipcode']:
+            
 
-            if int(z) == int(zipcode):
+            if int(z) == int(zipCode):
+                
 
                 if unEmp90 == 'true':
+                    
 
                     if int(user_income) <= income_goal:
+                        
+                        
 
                         if covidFH == 'true':
 
                             cityName = cityName.lower()
                             if cityName.startswith('spokane'):
+                                
                                 if cityName.endswith('valley'):
-                                    if minorGuest == 'true':
-
-                                        return {
-                                            'SNAP_ERA':1,
-                                            'SNAP_ERAP': 0,
-                                            'VLP_EDP': edpNum,
-                                            'FP':fpNum
-                                            }
-                                    else:
-                                        return {
-                                            'SNAP_ERA':0,
-                                            'SNAP_ERAP':1,
-                                            'VLP_EDP': edpNum,
-                                            'FP':fpNum
-                                        }
+                                    era = 1
+                                    erap = 0
                                 else:
                                     pass
+
+                                
                             else:
-                                if minorGuest == 'true':
+                                era = 1
+                                erap = 0
 
-                                    return {
-                                        'SNAP_ERA':1,
-                                        'SNAP_ERAP': 0,
-                                        'VLP_EDP': edpNum,
-                                        'FP':fpNum
-                                        }
-                                else:
-                                    return {
-                                        'SNAP_ERA':1,
-                                        'SNAP_ERAP':0,
-                                        'VLP_EDP': edpNum,
-                                        'FP':fpNum
-                                    }
                         else:
-                            pass
-
+                            era = 0
+                            erap = 0
                     else:
-                        pass
+                        era = 0
+                        erap = 0
+
+
 
                 else:
-
+                    
                     if int(user_income) <= income_goal:
 
-                        if (int(rent) / int(income)) >= .50:
+                        
+                        
+
+                        if (int(monthlyRent) / int(monthlyIncome)) >= .50:
+                            
 
                             if covidFH == 'true':
-                                if minorGuest == 'true':
+                                erap = 1
+                                era = 0
 
-                                    return {
-                                        'SNAP_ERAP': 1,
-                                        'SNAP_ERA': 0,
-                                        'VLP_EDP': edpNum,
-                                        'FP':fpNum
-                                        }
-                                else:
-                                    return {
-                                        'SNAP_ERAP':1,
-                                        'SNAP_ERA':0,
-                                        'VLP_EDP': edpNum,
-                                        'FP':fpNum
-                                    }
                             else:
-                                pass
+                                erap = 0
+                                era = 0
 
                         else:
-                            pass
-                    else:
-            
-            
-                        pass
-            else:
-                pass
-                        
-        if minorGuest == 'true':
+                            erap = 0
+                            era = 0
 
-            return{
-                'SNAP_ERA':0,
-                'SNAP_ERAP':0,
-                'VLP_EDP': edpNum,
-                'FP':fpNum
-                }
-        else:
-            pass
+                
+                    else:
+
+                        era = 0
+                        erap = 0
+                        fpNum = 0
+                        
+        
+        return {
+            'SNAP_ERAP': erap,
+            'SNAP_ERA': era,
+            'VLP_EDP': edpNum,
+            'FP':fpNum
+        }
     except:
         return {
 
-            'SNAP_ERAP': 0,
-            'SNAP_ERA': 0,
+            'SNAP_ERAP': erap,
+            'SNAP_ERA': era,
             'VLP_EDP': edpNum,
             'FP':fpNum
         }
