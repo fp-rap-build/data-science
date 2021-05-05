@@ -100,8 +100,8 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
                                             }
                                     else:
                                         return {
-                                            'SNAP_ERA':1,
-                                            'SNAP_ERAP':0,
+                                            'SNAP_ERA':0,
+                                            'SNAP_ERAP':1,
                                             'VLP_EDP': edpNum,
                                             'FP':fpNum
                                         }
