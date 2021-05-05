@@ -33,6 +33,11 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
         fpNum = 1
     else:
         fpNum = 0
+
+    if covidFH == 'true':
+        edpNum = 1
+    else:
+        edpNum = 0
     
     if minorGuest == 'false':
         if unEmp90 == 'false':
@@ -41,6 +46,7 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
                     return {
                         'SNAP_ERA': 0,
                         'SNAP_ERAP': 0,
+                        'VLP_EDP': edpNum,
                         'FP': fpNum
                     }
         
@@ -53,7 +59,7 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
         return{
             'SNAP_ERA': 0,
             'SNAP_ERAP': 0,
-            'CC':0,
+            'VLP_EDP': edpNum,
             'FP':fpNum}
     try:
         # calculate yearly income from user input of monthly income
@@ -89,14 +95,14 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
                                         return {
                                             'SNAP_ERA':1,
                                             'SNAP_ERAP': 0,
-                                            'CC': 0,
+                                            'VLP_EDP': edpNum,
                                             'FP':fpNum
                                             }
                                     else:
                                         return {
                                             'SNAP_ERA':1,
                                             'SNAP_ERAP':0,
-                                            'CC':0,
+                                            'VLP_EDP': edpNum,
                                             'FP':fpNum
                                         }
                                 else:
@@ -107,14 +113,14 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
                                     return {
                                         'SNAP_ERA':1,
                                         'SNAP_ERAP': 0,
-                                        'CC': 0,
+                                        'VLP_EDP': edpNum,
                                         'FP':fpNum
                                         }
                                 else:
                                     return {
                                         'SNAP_ERA':1,
                                         'SNAP_ERAP':0,
-                                        'CC':0,
+                                        'VLP_EDP': edpNum,
                                         'FP':fpNum
                                     }
                         else:
@@ -135,14 +141,14 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
                                     return {
                                         'SNAP_ERAP': 1,
                                         'SNAP_ERA': 0,
-                                        'CC': 0,
+                                        'VLP_EDP': edpNum,
                                         'FP':fpNum
                                         }
                                 else:
                                     return {
                                         'SNAP_ERAP':1,
                                         'SNAP_ERA':0,
-                                        'CC':0,
+                                        'VLP_EDP': edpNum,
                                         'FP':fpNum
                                     }
                             else:
@@ -162,7 +168,7 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
             return{
                 'SNAP_ERA':0,
                 'SNAP_ERAP':0,
-                'CC':0,
+                'VLP_EDP': edpNum,
                 'FP':fpNum
                 }
         else:
@@ -172,6 +178,6 @@ async def determine_eligibility(zipcode, cityName, family_size, income, rent, un
 
             'SNAP_ERAP': 0,
             'SNAP_ERA': 0,
-            'CC': 0,
+            'VLP_EDP': edpNum,
             'FP':fpNum
         }
