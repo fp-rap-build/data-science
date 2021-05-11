@@ -101,7 +101,8 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                                     era = 1
                                     erap = 0
                                 else:
-                                    pass
+                                    era = 0
+                                    erap = 1
 
                                 
                             else:
