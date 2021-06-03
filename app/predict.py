@@ -90,8 +90,6 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
 
                     if int(user_income) <= income_goal:
                         
-                        
-
                         if covidFH == 'true':
 
                             cityName = cityName.lower()
@@ -99,7 +97,7 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                                 
                                 if cityName.endswith('valley'):
                                     era = 1
-                                    erap = 0
+                                    erap = 1
                                 else:
                                     era = 0
                                     erap = 1
@@ -107,7 +105,7 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                                 
                             else:
                                 era = 1
-                                erap = 0
+                                erap = 1
 
                         else:
                             era = 0
@@ -130,15 +128,15 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
 
                             if covidFH == 'true':
                                 erap = 1
-                                era = 0
+                                era = 1
 
                             else:
-                                erap = 0
-                                era = 0
+                                erap = 1
+                                era = 1
 
                         else:
-                            erap = 0
-                            era = 0
+                            erap = 1
+                            era = 1
 
                 
                     else:
