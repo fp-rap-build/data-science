@@ -99,8 +99,8 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                                     era = 1
                                     erap = 1
                                 else:
-                                    era = 0
-                                    erap = 1
+                                    era = 1
+                                    erap = 0
 
                                 
                             else:
@@ -127,12 +127,23 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                             
 
                             if covidFH == 'true':
-                                erap = 1
-                                era = 1
+                                cityName = cityName.lower()
+                                if cityName.startswith('spokane'):
+                                
+                                    if cityName.endswith('valley'):
+                                        era = 1
+                                        erap = 1
+                                    else:
+                                        era = 1
+                                        erap = 0
+
+                                else:
+                                    erap = 1
+                                    era = 1
 
                             else:
-                                erap = 1
-                                era = 1
+                                erap = 0
+                                era = 0
 
                         else:
                             erap = 1
