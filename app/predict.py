@@ -38,6 +38,8 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
         edpNum = 1
     else:
         edpNum = 0
+
+    
     
     if minorGuest == 'false':
         if unEmp90 == 'false':
@@ -96,23 +98,28 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                             if cityName.startswith('spokane'):
                                 
                                 if cityName.endswith('valley'):
-                                    era = 1
+                                    era = 0
                                     erap = 1
+                                    fpNum = 0
                                 else:
                                     era = 1
                                     erap = 0
+                                    
 
                                 
                             else:
                                 era = 1
                                 erap = 1
+                                fpNum = 0
 
                         else:
                             era = 0
                             erap = 0
+                            fpNum = 0
                     else:
                         era = 0
                         erap = 0
+                        fpNum = 0
 
 
 
@@ -133,21 +140,26 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                                     if cityName.endswith('valley'):
                                         era = 1
                                         erap = 1
+                                        fpNum = 0
                                     else:
                                         era = 1
                                         erap = 0
+                                        
 
                                 else:
                                     erap = 1
                                     era = 1
+                                    fpNum = 0
 
                             else:
                                 erap = 0
                                 era = 0
+                                fpNum = 0
 
                         else:
                             erap = 1
                             era = 1
+                            
 
                 
                     else:
