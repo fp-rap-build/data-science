@@ -49,7 +49,9 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                         'SNAP_ERA': 0,
                         'SNAP_ERAP': 0,
                         'VLP_EDP': edpNum,
-                        'FP': fpNum
+                        'FP': fpNum,
+                        'LS': 0,
+                        'OTHER': 1
                     }
         
     def getIncomegoal(zipCode, familySize):
@@ -62,7 +64,11 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
             'SNAP_ERA': 0,
             'SNAP_ERAP': 0,
             'VLP_EDP': edpNum,
-            'FP':fpNum}
+            'FP':fpNum,
+            'LS': 0,
+            'OTHER': 1
+        }
+            
     try:
         
         # calculate yearly income from user input of monthly income
@@ -101,9 +107,13 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                                     era = 0
                                     erap = 1
                                     fpNum = 0
+                                    ls = 0
+                                    other = 1
                                 else:
                                     era = 1
                                     erap = 0
+                                    ls = 0
+                                    other = 1
                                     
 
                                 
@@ -111,15 +121,21 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                                 era = 1
                                 erap = 1
                                 fpNum = 0
+                                ls = 0
+                                other = 1
 
                         else:
                             era = 0
                             erap = 0
                             fpNum = 0
+                            ls = 0
+                            other = 1
                     else:
                         era = 0
                         erap = 0
                         fpNum = 0
+                        ls = 0
+                        other = 1
 
 
 
@@ -141,24 +157,34 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                                         era = 1
                                         erap = 1
                                         fpNum = 0
+                                        ls = 0
+                                        other = 1
                                     else:
                                         era = 1
                                         erap = 0
+                                        ls = 0
+                                        other = 1
                                         
 
                                 else:
                                     erap = 1
                                     era = 1
                                     fpNum = 0
+                                    ls = 0
+                                    other = 1
 
                             else:
                                 erap = 0
                                 era = 0
                                 fpNum = 0
+                                ls = 0
+                                other = 1
 
                         else:
                             erap = 1
                             era = 1
+                            ls = 0
+                            other = 1
                             
 
                 
@@ -167,19 +193,25 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                         era = 0
                         erap = 0
                         fpNum = 0
+                        ls = 0
+                        other = 1
                         
         
         return {
-            'SNAP_ERAP': erap,
-            'SNAP_ERA': era,
+            'SNAP_ERAP': 0,
+            'SNAP_ERA': 0,
             'VLP_EDP': edpNum,
-            'FP':fpNum
+            'FP':fpNum,
+            'LS': 0,
+            'OTHER': 1
         }
     except:
         return {
 
-            'SNAP_ERAP': erap,
-            'SNAP_ERA': era,
+            'SNAP_ERAP': 0,
+            'SNAP_ERA': 0,
             'VLP_EDP': edpNum,
-            'FP':fpNum
+            'FP':fpNum,
+            'LS': 0,
+            'OTHER': 1
         }
