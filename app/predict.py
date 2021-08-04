@@ -112,7 +112,7 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                                 else:
                                     era = 1
                                     erap = 0
-                                    ls = 0
+                                    ls = 1
                                     other = 1
                                     
 
@@ -162,7 +162,7 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                                     else:
                                         era = 1
                                         erap = 0
-                                        ls = 0
+                                        ls = 1
                                         other = 1
                                         
 
@@ -202,7 +202,7 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
             'SNAP_ERA': 0,
             'VLP_EDP': edpNum,
             'FP':fpNum,
-            'LS': 0,
+            'LS': ls,
             'OTHER': 1
         }
     except:
@@ -212,6 +212,6 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
             'SNAP_ERA': 0,
             'VLP_EDP': edpNum,
             'FP':fpNum,
-            'LS': 0,
+            'LS': ls,
             'OTHER': 1
         }
