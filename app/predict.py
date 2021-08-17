@@ -14,27 +14,20 @@ router = APIRouter()
 user = pd.read_csv('app/spokane_zipcodes.csv', header='infer')
 
 
-class Item(BaseModel):
-    """Use this data model to parse the request body JSON."""
-
-    zipCode: int = Field(..., example = 99205)
-    familySize: int = Field(..., example = 4)
-    monthlyIncome: int = Field(..., example = 4000)
-    unEmp90: int = Field(..., example = 1)
-    foodWrkr: int = Field(..., example = 1)
-    monthlyRent: int = Field(..., example = 800)
-    minorGuest: int = Field(..., example = 1)
-    covidFH: int = Field(..., example = 1)
-
 
 @router.post('/predict')
-async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, monthlyRent, unEmp90, foodWrkr, minorGuest, covidFH):
+async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, monthlyRent, unEmp90, foodWrkr, minorGuest, covidFH, qualifiedForUnemployment, proofOfRisk):
     if minorGuest == 'true':
         fpNum = 1
     else:
         fpNum = 0
 
-    if covidFH == 'true':
+    if (covidFH == 'true' or qualifiedForUnemployment == 'true' or proofOfRisk == 'true'):
+        mergedCovidFH = 'true'
+    else:
+        mergedCovidFH = 'false'
+
+    if mergedCovidFH  == 'true':
         edpNum = 1
     else:
         edpNum = 0
@@ -44,7 +37,7 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
     if minorGuest == 'false':
         if unEmp90 == 'false':
             if foodWrkr == 'false':
-                if covidFH == 'false':
+                if mergedCovidFH == 'false':
                     return {
                         'SNAP_ERA': 0,
                         'SNAP_ERAP': 0,
@@ -98,7 +91,7 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
 
                     if int(user_income) <= income_goal:
                         
-                        if covidFH == 'true':
+                        if mergedCovidFH == 'true':
 
                             cityName = cityName.lower()
                             if cityName.startswith('spokane'):
@@ -149,7 +142,7 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                         if (int(monthlyRent) / int(monthlyIncome)) >= .50:
                             
 
-                            if covidFH == 'true':
+                            if mergedCovidFH == 'true':
                                 cityName = cityName.lower()
                                 if cityName.startswith('spokane'):
                                 
