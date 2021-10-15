@@ -94,35 +94,29 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                         if mergedCovidFH == 'true':
 
                             cityName = cityName.lower()
-                            if cityName.startswith('spokane'):
-                                
-                                if cityName.endswith('valley'):
-                                    era = 0
-                                    erap = 1
-                                    fpNum = 0
-                                    ls = 0
-                                    other = 1
-                                else:
-                                    era = 1
-                                    erap = 0
-                                    ls = 1
-                                    other = 1
+                            if cityName == 'spokane':
+                                era = 1
+                                ls = 1
+                                fpNum = 1
+                                erap = 0
+                                other = 1
+                            else:
+                                era = 0
+                                ls = 0
+                                fpNum = 0
+                                erap = 1
+                                other = 1
+                        
                                     
 
                                 
-                            else:
-                                era = 1
-                                erap = 1
-                                fpNum = 0
-                                ls = 0
-                                other = 1
-
                         else:
                             era = 0
                             erap = 0
                             fpNum = 0
                             ls = 0
                             other = 1
+
                     else:
                         era = 0
                         erap = 0
