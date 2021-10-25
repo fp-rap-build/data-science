@@ -17,23 +17,27 @@ user = pd.read_csv('app/spokane_zipcodes.csv', header='infer')
 
 @router.post('/predict')
 async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, monthlyRent, unEmp90, foodWrkr, minorGuest, covidFH, qualifiedForUnemployment, proofOfRisk):
+    # check if household has a minor
     if minorGuest == 'true':
         fpNum = 1
     else:
         fpNum = 0
 
+    # check if household has marked any of the covidFH questions (one or more makes mergedCovidFH = 1)
     if (covidFH == 'true' or qualifiedForUnemployment == 'true' or proofOfRisk == 'true'):
         mergedCovidFH = 'true'
     else:
         mergedCovidFH = 'false'
 
+    # if they have any impact by covid, they qualify for eviction defense program
     if mergedCovidFH  == 'true':
         edpNum = 1
     else:
         edpNum = 0
 
     
-    
+    # check for edge case where they don't meet any of the criteria for eligibility
+    # (still point them to other resources so not all hope is lost)
     if minorGuest == 'false':
         if unEmp90 == 'false':
             if foodWrkr == 'false':
@@ -41,23 +45,27 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                     return {
                         'SNAP_ERA': 0,
                         'SNAP_ERAP': 0,
-                        'VLP_EDP': edpNum,
-                        'FP': fpNum,
+                        'VLP_EDP': 0,
+                        'FP': 0,
                         'LS': 0,
                         'OTHER': 1
                     }
-        
+
+
+    #  use family size and zipcode to determine the max they can earn yearly and still qualify 
     def getIncomegoal(zipCode, familySize):
         income_goal = (user[(user['zipcode'] == int(zipCode)) & (user['family_members'] == int(familySize))].iloc[0][4]).astype(int)
         return income_goal
     try:
+        # attempt to get income goal, will only work for families inside spokane county
         income_goal = getIncomegoal(zipCode, familySize)
     except:
+        # if the zipcode was outside of spokane county, they don't qualify for help from any of us
         return{
             'SNAP_ERA': 0,
             'SNAP_ERAP': 0,
-            'VLP_EDP': edpNum,
-            'FP':fpNum,
+            'VLP_EDP': 0,
+            'FP':0,
             'LS': 0,
             'OTHER': 1
         }
@@ -84,7 +92,7 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
             
 
             if int(z) == int(zipCode):
-                
+                print('found zipcode')
 
                 if unEmp90 == 'true':
                     
@@ -141,7 +149,7 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                                 if cityName.startswith('spokane'):
                                 
                                     if cityName.endswith('valley'):
-                                        era = 1
+                                        era = 0
                                         erap = 1
                                         fpNum = 0
                                         ls = 0
@@ -155,7 +163,7 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
 
                                 else:
                                     erap = 1
-                                    era = 1
+                                    era = 0
                                     fpNum = 0
                                     ls = 0
                                     other = 1
@@ -168,10 +176,36 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                                 other = 1
 
                         else:
-                            erap = 1
-                            era = 1
-                            ls = 0
-                            other = 1
+                            if mergedCovidFH == 'true':
+                                cityName = cityName.lower()
+                                if cityName.startswith('spokane'):
+                                
+                                    if cityName.endswith('valley'):
+                                        era = 0
+                                        erap = 1
+                                        fpNum = 0
+                                        ls = 0
+                                        other = 1
+                                    else:
+                                        era = 1
+                                        erap = 0
+                                        ls = 1
+                                        other = 1
+                                        
+
+                                else:
+                                    erap = 1
+                                    era = 0
+                                    fpNum = 0
+                                    ls = 0
+                                    other = 1
+
+                            else:
+                                erap = 0
+                                era = 0
+                                fpNum = 0
+                                ls = 0
+                                other = 1
                             
 
                 
@@ -197,8 +231,8 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
 
             'SNAP_ERAP': 0,
             'SNAP_ERA': 0,
-            'VLP_EDP': edpNum,
-            'FP':fpNum,
-            'LS': ls,
+            'VLP_EDP': 0,
+            'FP':0,
+            'LS': 0,
             'OTHER': 1
         }
