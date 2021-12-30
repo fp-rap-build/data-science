@@ -17,11 +17,7 @@ user = pd.read_csv('app/spokane_zipcodes.csv', header='infer')
 
 @router.post('/predict')
 async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, monthlyRent, unEmp90, foodWrkr, minorGuest, covidFH, qualifiedForUnemployment, proofOfRisk):
-    # check if household has a minor
-    if minorGuest == 'true':
-        fpNum = 1
-    else:
-        fpNum = 0
+    
 
     # check if household has marked any of the covidFH questions (one or more makes mergedCovidFH = 1)
     if (covidFH == 'true' or qualifiedForUnemployment == 'true' or proofOfRisk == 'true'):
@@ -217,7 +213,11 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                         ls = 0
                         other = 1
                         
-        
+        # check if household has a minor
+        if minorGuest == 'true':
+            fpNum = 1
+        else:
+            fpNum = 0
         return {
             'SNAP_ERAP': 0,
             'SNAP_ERA': 0,
@@ -227,6 +227,7 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
             'OTHER': 1
         }
     except:
+       
         return {
 
             'SNAP_ERAP': 0,
