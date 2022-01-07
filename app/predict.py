@@ -215,9 +215,15 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                         
         # check if household has a minor
         if minorGuest == 'true':
-            fpNum = 1
-        else:
-            fpNum = 0
+            cityName = cityName.lower()
+            if cityName.startswith('spokane'):
+                if cityName.endswith('valley'):
+                    fpNum = 0
+                else:
+                    fpNum = 1
+            else:
+                fpNum = 0
+        
         return {
             'SNAP_ERAP': 0,
             'SNAP_ERA': 0,
