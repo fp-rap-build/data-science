@@ -13,7 +13,8 @@ router = APIRouter()
 
 user = pd.read_csv('app/spokane_zipcodes.csv', header='infer')
 
-
+# temp turn off apps
+# to do: make back door
 
 @router.post('/predict')
 async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, monthlyRent, unEmp90, foodWrkr, minorGuest, covidFH, qualifiedForUnemployment, proofOfRisk):
