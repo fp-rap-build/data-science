@@ -46,7 +46,14 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                         'LS': 0,
                         'OTHER': 1
                     }
-
+                else:
+                    pass
+            else:
+                pass
+        else:
+            pass
+    else:
+        pass
 
     #  use family size and zipcode to determine the max they can earn yearly and still qualify 
     def getIncomegoal(zipCode, familySize):
@@ -101,7 +108,8 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                             if cityName == 'spokane':
                                 era = 1
                                 ls = 1
-                                fpNum = 1
+                                # temp disabled
+                                fpNum = 0
                                 erap = 0
                                 other = 1
                             else:
@@ -220,7 +228,8 @@ async def determine_eligibility(zipCode, cityName, familySize, monthlyIncome, mo
                 if cityName.endswith('valley'):
                     fpNum = 0
                 else:
-                    fpNum = 1
+                    # temp disabled
+                    fpNum = 0
             else:
                 fpNum = 0
         
